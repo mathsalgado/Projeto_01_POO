@@ -40,6 +40,7 @@ public class Resposta_Composto extends HttpServlet {
             out.println("<title>Resultado Juros Composto</title>");            
             out.println("</head>");
             out.println("<body>");
+            out.println("<h4> <a href='juros_compostos.html'> Voltar </a> </h4>");
             
             double c = Double.parseDouble(request.getParameter("c"));
             double i = Double.parseDouble(request.getParameter("i"));
