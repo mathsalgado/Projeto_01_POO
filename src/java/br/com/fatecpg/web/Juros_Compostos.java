@@ -17,8 +17,8 @@ import javax.servlet.http.HttpServletResponse;
  *
  * @author Usuário
  */
-@WebServlet(name = "Home", urlPatterns = {"/home.html"})
-public class Home extends HttpServlet {
+@WebServlet(name = "Juros_Compostos", urlPatterns = {"/juros_compostos.html"})
+public class Juros_Compostos extends HttpServlet {
 
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
@@ -37,23 +37,20 @@ public class Home extends HttpServlet {
             out.println("<!DOCTYPE html>");
             out.println("<html>");
             out.println("<head>");
-            out.println("<title>Servlet Home</title>");            
+            out.println("<title> Juros Compostos</title>");            
             out.println("</head>");
             out.println("<body>");
-            
-            out.println("<h4> <a href='index.html'> Voltar </a> </h4>"); 
-            out.println("<h1> Projeto 01 - POO </h1>");
-            out.println("<h2> Integrantes: </h2>");
-            out.println("<h3> - Jefferson da Silva Mariano <br> "
-                    + "       - Johnatas Freitas Santos <br>"
-                    + "       - Matheus Moysés Salgado </h3>");
-            
-            out.println("Neste Projeto, temos como objetivo permitir"
-                    + " que o Usuário calcule o Juros Simples e Juros Composto"
-                    + " de uma Aplicação Financeira. ");           
-            out.println("<h2> <a href='juros_simples.html'> Juros Simples </a> </h2>"); 
-            out.println("<h2> <a href='juros_compostos.html'> Juros Composto </a> </h2>"); 
-            
+            out.println("<h4> <a href='home.html'> Voltar </a> </h4>");
+            out.println("<h2> Para calcularmos o Juros Composto necessitamos de: </h2>");
+            out.println("<form action='resposta_composto.html'>"
+                    + "Valor do Capital:"
+                    + "<input type='text' name='c'/> </form> <br>");
+            out.println("<form action='resposta_composto.html'>"
+                    + "Taxa de juros:"
+                    + "<input type='text' name='i'/> </form> <br>");
+            out.println("<form action='resposta_composto.html'>"
+                    + "Período:"
+                    + "<input type='text' name='t'/> </form>");
             out.println("</body>");
             out.println("</html>");
         }
