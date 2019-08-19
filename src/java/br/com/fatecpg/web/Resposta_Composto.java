@@ -17,8 +17,8 @@ import javax.servlet.http.HttpServletResponse;
  *
  * @author Usuário
  */
-@WebServlet(name = "Home", urlPatterns = {"/home.html"})
-public class Home extends HttpServlet {
+@WebServlet(name = "Resposta_Composto", urlPatterns = {"/resposta_composto.html"})
+public class Resposta_Composto extends HttpServlet {
 
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
@@ -37,23 +37,10 @@ public class Home extends HttpServlet {
             out.println("<!DOCTYPE html>");
             out.println("<html>");
             out.println("<head>");
-            out.println("<title>Servlet Home</title>");            
+            out.println("<title>Servlet Resposta_Composto</title>");            
             out.println("</head>");
             out.println("<body>");
-            
-            out.println("<h4> <a href='index.html'> Voltar </a> </h4>"); 
-            out.println("<h1> Projeto 01 - POO </h1>");
-            out.println("<h2> Integrantes: </h2>");
-            out.println("<h3> - Jefferson da Silva Mariano <br> "
-                    + "       - Johnatas Freitas Santos <br>"
-                    + "       - Matheus Moysés Salgado </h3>");
-            
-            out.println("Neste Projeto, temos como objetivo permitir"
-                    + " que o Usuário calcule o Juros Simples e Juros Composto"
-                    + " de uma Aplicação Financeira. ");           
-            out.println("<h2> <a href='juros_simples.html'> Juros Simples </a> </h2>"); 
-            out.println("<h2> <a href='juros_compostos.html'> Juros Composto </a> </h2>"); 
-            
+            out.println("<h1>Servlet Resposta_Composto at " + request.getContextPath() + "</h1>");
             out.println("</body>");
             out.println("</html>");
         }
