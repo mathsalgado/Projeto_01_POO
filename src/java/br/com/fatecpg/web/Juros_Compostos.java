@@ -43,14 +43,13 @@ public class Juros_Compostos extends HttpServlet {
             out.println("<h4> <a href='home.html'> Voltar </a> </h4>");
             out.println("<h2> Para calcularmos o Juros Composto necessitamos de: </h2>");
             out.println("<form action='resposta_composto.html'>"
-                    + "Valor do Capital:"
-                    + "<input type='text' name='c'/> </form> <br>");
-            out.println("<form action='resposta_composto.html'>"
-                    + "Taxa de juros:"
-                    + "<input type='text' name='i'/> </form> <br>");
-            out.println("<form action='resposta_composto.html'>"
-                    + "Período:"
-                    + "<input type='text' name='t'/> </form>");
+                    + "Valor do Capital: "
+                    + "<input type='text' name='c'/> <br>");
+            out.println("Taxa de juros: "
+                    + "<input type='text' name='i'/> <br>");
+            out.println("Período: "
+                    + "<input type='text' name='t'/> <br>");
+            out.println("<input type='submit' name 'montante' value='Gerar Montante'/>");
             out.println("</body>");
             out.println("</html>");
         }

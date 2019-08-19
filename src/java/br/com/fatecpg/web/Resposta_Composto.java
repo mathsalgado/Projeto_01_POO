@@ -37,10 +37,25 @@ public class Resposta_Composto extends HttpServlet {
             out.println("<!DOCTYPE html>");
             out.println("<html>");
             out.println("<head>");
-            out.println("<title>Servlet Resposta_Composto</title>");            
+            out.println("<title>Resultado Juros Composto</title>");            
             out.println("</head>");
             out.println("<body>");
-            out.println("<h1>Servlet Resposta_Composto at " + request.getContextPath() + "</h1>");
+            
+            double c = Double.parseDouble(request.getParameter("c"));
+            double i = Double.parseDouble(request.getParameter("i"));
+            int t = Integer.parseInt(request.getParameter("t"));
+            
+            out.println("<h1>Montante de sua aplicação </h1>");
+            out.println("<table border='1'>");
+            for(int j=1; j<=t; j++){
+                    double m = c *Math.pow((1 +(i/100)),j);
+                    out.println("<tr>");
+                    out.print("<th> Período " + j + "</th>");
+                    out.print("<td> Montante :" + m + "</td>"); 
+                    out.println("</tr>");
+            }
+            out.println("</table>");
+            
             out.println("</body>");
             out.println("</html>");
         }

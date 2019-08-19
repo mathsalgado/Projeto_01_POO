@@ -40,7 +40,15 @@ public class Resposta_Simples extends HttpServlet {
             out.println("<title>Resultado Juros Simples </title>");            
             out.println("</head>");
             out.println("<body>");
-            out.println("<h1>Servlet Resposta_Simples at " + request.getContextPath() + "</h1>");
+            
+            double c = Double.parseDouble(request.getParameter("c"));
+            double i = Double.parseDouble(request.getParameter("i"));
+            int t = Integer.parseInt(request.getParameter("t"));
+            double m = c * (1 + ((i/100) * t));
+            
+            out.println("<h1>Montante de sua aplicação = $"
+                        + m  + "</h1>");
+           
             out.println("</body>");
             out.println("</html>");
         }
